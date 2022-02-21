@@ -15,8 +15,10 @@ function fib(n) {
 }
 
 function is_prime(n) {
-    if (n <= 2)
+    if (n == 2)
         return 1
+    else if (n <= 1)
+        return 0
     last = sqrt(n) + 1
     for (i = 2; i <= last; ++i)
         if (n % i == 0)
@@ -37,6 +39,6 @@ BEGIN {
             printf "%-10d %d\n", j, fib(j)
             n--
         }
-        j++
+		j++
     } while (n > 0)
 }
