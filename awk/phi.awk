@@ -1,7 +1,7 @@
 #!/usr/local/bin/awk -f
 #
-# 打印黄金分割数的awk程序
-# 在one true awk中测试通过
+# 计算黄金分割数的awk程序
+# 在one true awk version 20211208中测试通过
 
 function phie(n) {
     if (n == 0)
