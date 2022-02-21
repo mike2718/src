@@ -31,12 +31,12 @@ BEGIN {
     n += 0
     printf "%-10s %s\n", "斐波那契数列第n项", "斐波那契质数"
     printf "%-10s %s\n", "-----------------", "------------"
-	j = 3    # fib(3) == 2
+    j = 3    # fib(3) == 2
     do {
-		if (is_prime(fib(j))) {
-			printf "%-10d %d\n", j, fib(j)
-			n--
-		}
-		j++
+        if (is_prime(fib(j))) {
+            printf "%-10d %d\n", j, fib(j)
+            n--
+        }
+        j++
     } while (n > 0)
 }
