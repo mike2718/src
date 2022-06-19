@@ -20,7 +20,7 @@ match($0, /[a-zA-Z]+$/) {
         for(i=1; i<=n; i++) {
             printf "%c", (ord[m[i]] - 97 + j) % 26 + 97
         }
-        printf ", "
+        printf "(K=%c), ", 97 + j
     }
     printf "\n\n"
 }
