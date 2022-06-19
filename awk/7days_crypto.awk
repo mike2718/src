@@ -9,7 +9,7 @@ BEGIN {
         ord[sprintf("%c",n)]=n
     for(n=0;n<256;n++)
         chr[n]=sprintf("%c",n)
-    printf "%-10s %s\n", "密文", "穷举字符串"
+    printf "%-10s %s\n", "输入密文", "穷举字符串"
     printf "%-10s %s\n", "----------", "----------"
 }
 match($0, /[a-zA-Z]+$/) {
