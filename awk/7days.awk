@@ -18,7 +18,7 @@ match($0, /[a-zA-Z]+$/) {
     printf "%-10s ", $0
     for(j=0; j<26; j++) {
         for(i=1; i<=n; i++) {
-            printf "%c", (ord[m[i]] + 97 + j) % 26 + 97
+            printf "%c", (ord[m[i]] - 97 + j) % 26 + 97
         }
         printf ", "
     }
