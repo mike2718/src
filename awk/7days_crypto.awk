@@ -20,7 +20,7 @@ match($0, /[a-zA-Z]+$/) {
         for(i=1; i<=n; i++) {
             c=ord[m[i]]
             r=(c + j - 97) % 26 + 97
-            if(r>=117 && r<=122)
+            if(r>=115 && r<=122)
                 r=r-1
             printf "%c", r
         }
