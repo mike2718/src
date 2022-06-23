@@ -18,13 +18,13 @@ match($0, /[a-zA-Z]+$/) {
     printf "%-10s ", $0
     for(j=0; j<26; j++) {
         for(i=1; i<=n; i++) {
-            c=ord[m[i]]
-            r=(c + j - 97) % 26 + 97
-            if(r>=118 && r<=122)  # u~z向前移1个字母
-                r=r-1
-            printf "%c", r
+            e=ord[m[i]]
+            s=(e + j - 97) % 26 + 97
+            #if(s >= 115 && r <= 122)
+            #    s = s - 1
+            printf "%c", s
         }
-        printf "(K=%c), ", 97 + j
+        printf "(S=%d), ", -j
     }
     printf "\n\n"
 }
