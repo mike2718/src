@@ -2,7 +2,7 @@
 # 穷举7 Days to End with You游戏中奇怪字符密码的awk程序
 # 在one true awk version 20220530中测试通过
 # 请先看把密码字符转换成可输入字符的对应表：
-# https://docs.google.com/document/d/e/2PACX-1vRGVB7DoMCVObCsYQfHpazx60K2PyBUp0FOY588xHX99RjqADFdS4R3gPx5esaYHTSpK_ZR3UEBMe5J/pub
+# https://www.sakuranamiki.net/7days/index.html
 #
 BEGIN {
     for(n=0;n<256;n++)
@@ -24,7 +24,7 @@ match($0, /[a-zA-Z]+$/) {
             #    s = s - 1
             printf "%c", s
         }
-        printf "(S=%d), ", -j
+        printf "(S=%d), ", j
     }
     printf "\n\n"
 }
