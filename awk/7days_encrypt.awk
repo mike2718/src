@@ -9,7 +9,7 @@ BEGIN {
         ord[sprintf("%c",n)]=n
     for(n=0;n<256;n++)
         chr[n]=sprintf("%c",n)
-    printf "%-10s %s\n", "输入明文", "加密字符串"
+    printf "%-10s %s\n", "Input plaintext", "Encrypted string"
     printf "%-10s %s\n", "----------", "----------"
 }
 match($0, /[a-zA-Z]+$/) {
@@ -24,7 +24,7 @@ match($0, /[a-zA-Z]+$/) {
     s = int(sum / 12 + 0.5)
     #printf "sum = %d, shift = %d, ", sum, s
     for(i=1; i<=n; i++) {
-        if(ord[m[i]] - 97 + s >= 25)  # 经过z
+        if(ord[m[i]] - 97 + s >= 25)  # through 'z'
             printf "%c", s - 25 + ord[m[i]]
         else
             printf "%c", ord[m[i]] + s
