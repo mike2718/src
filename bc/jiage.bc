@@ -1,0 +1,48 @@
+#!/usr/bin/bc -q
+# m酱自用闲鱼商品价格计算程序 ver.0.2
+# 用法:
+#   $ bc -q jiage.bc
+
+scale = 8
+y = 18 # 运费
+s = 8 # 打印的数量
+
+# 计算黄金分割数
+define g(n) {
+    if (n == 0) { return (1); } else {
+        if (n == 1) { return ((sqrt(5) + 1) / 2); } else {
+            if (n > 1) { return (g(n-1) + g(n-2)); } else {
+                 if (n < 0) { return (g(n+2) - g(n+1)); }
+            }
+        }
+    }
+}
+
+print "\n闲鱼商品价格计算程序！\n"
+print "  要退出程序，请输入0。\n\n"
+
+while (1) {
+    print "商品成本价？"; c = read()
+    c /= 1
+    if (c == 0 || c < 0) break; # 当输入0和负数时退出
+
+    for (i=-1; i<s-1; i++) {
+        if (i==0) {
+            print "价格 = ", g(i) * c + y, "\n";
+            continue;
+        }
+        if (i==-1) {
+            print "降价后的价格 = ", g(i) * c + y, "\n";
+            continue;
+        }
+        print "涨价后的价格", i, " = ", g(i) * c + y, "\t利润率 = "
+        scale = 4
+        if (i<2) { print g(i-2)*100,"%" } else { print g(i-1)*100,"%"; }
+        print "\n"
+    }
+    print "\n"
+}
+# 保证返回前最后肯定有一行，美观
+print "\n"
+
+quit
