@@ -1,0 +1,39 @@
+# 黄金分割数计算程序 ver.0.1
+# 用法:
+#   $ bc -q phi.bc
+
+scale = 20
+
+# 计算黄金分割数
+define g(n) {
+    if (n == 0) { return (1); } else {
+        if (n == 1) { return ((sqrt(5) + 1) / 2); } else {
+            if (n > 1) { return (g(n-1) + g(n-2)); } else {
+                 if (n < 0) { return (g(n+2) - g(n+1)); }
+            }
+        }
+    }
+}
+
+print "\n黄金分割数计算程序！\n\n"
+print "输入负整数，例：-n回车 返回级数>1的n项\n"
+print "输入正整数，例：n回车  返回级数<1的n项\n"
+print "  要退出程序，请输入0。\n"
+print "--------------------------------------\n\n"
+
+while (1) {
+    print "打印数量？"; n = read()
+    n /= 1
+    if (n == 0) break; # 当输入0时退出
+
+    s = 0
+    if (n < 0) { n = -n; s = 1; }
+    for (i = 0; i < n; i++) {
+        if (s == 1) { print "Fib(", -i, ") = ", g(-i), "\n"; } else {
+            print "Fib(", i, ") = ", g(i), "\n";
+        }
+    }
+    print "\n"
+}
+print "\n"
+quit
