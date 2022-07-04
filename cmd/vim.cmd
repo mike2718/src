@@ -1,3 +1,3 @@
 @echo off
 rem vim.cmd
-E:\soft\Neovim\bin\nvim-qt.exe %*
+E:\soft\vim\vim82\vim.exe %*
