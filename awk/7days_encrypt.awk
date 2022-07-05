@@ -5,6 +5,7 @@
 # https://www.sakuranamiki.net/7days/index.html
 #
 BEGIN {
+    FS = "\000"
     for(n=0;n<256;n++)
         ord[sprintf("%c",n)]=n
     for(n=0;n<256;n++)
@@ -13,8 +14,7 @@ BEGIN {
     printf "%-10s %s\n", "----------", "----------"
 }
 match($0, /[a-zA-Z]+$/) {
-    FS = "\000"
-    n=split($0, m)
+    n=split(tolower($0), m)
     printf "%-10s ", $0
     sum = 0
     for(i=1; i<=n; i++) {
