@@ -23,14 +23,13 @@ match($0, /[a-zA-Z]+$/) {
         sum = sum + c
     }
     s = int(sum / 12 + 0.5)
-    #printf "sum = %d, shift = %d, ", sum, s
     for(i=1; i<=n; i++) {
         if(ord[m[i]] - 97 + s >= 25)  # 通过了 'z'
             printf "%c", s - 25 + ord[m[i]]
         else
             printf "%c", ord[m[i]] + s
     }
-    printf " (shift = %d)", s
+    printf " (移位 = %d)", s
     printf "\n\n"
 }
 END {
