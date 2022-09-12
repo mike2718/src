@@ -9,13 +9,13 @@
 *.h++   text diff=cpp
 *.hh    text diff=cpp
 *.awk   text diff=awk
-*.bc    text diff=bc
 
 *.cmd text eol=crlf
 *.bat text eol=crlf
 
 *.sh text eol=lf
 *.bash text eol=lf
+*.bc text eol=lf
 
 # Compiled Object files
 *.slo   binary
