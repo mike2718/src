@@ -1,5 +1,5 @@
-// å°†å‘¼å·è½¬æ¢æˆå­—æ¯è§£é‡Šæ³•çš„å•è¯ç»„åˆçš„Cç¨‹åº
-// ç”¨æ³•ï¼š
+// ½«ºôºÅ×ª»»³É×ÖÄ¸½âÊÍ·¨µÄµ¥´Ê×éºÏµÄC³ÌĞò
+// ÓÃ·¨£º
 //   $ pcc -Wall -Wpedantic -Wextra -std=c99 -o icao icao.c
 //   $ ./icao
 #include <stdio.h>
@@ -19,8 +19,8 @@ int main (void)
                           '\0', '\0', '\0', '\0', '\0', '\0', '\0', '\0', '\0', '\0'
                          };
     unsigned int count = 0;
-    printf("\n\tå°†å‘¼å·è½¬æ¢æˆå­—æ¯è§£é‡Šæ³•çš„å•è¯ç»„åˆçš„Cç¨‹åº\n\n");
-    printf("è¯·è¾“å…¥è¦è½¬æ¢çš„å‘¼å·ï¼š");
+    printf("\n\t½«ºôºÅ×ª»»³É×ÖÄ¸½âÊÍ·¨µÄµ¥´Ê×éºÏµÄC³ÌĞò\n\n");
+    printf("ÇëÊäÈëÒª×ª»»µÄºôºÅ£º");
     if (fgets(word, 10, stdin))
     {
         word[strcspn(word, "\n")] = 0;
@@ -163,11 +163,11 @@ int main (void)
         case '9':
             strcat(phonetic, " Nine");
             break;
-            //default: printf("æ‚¨è¾“å…¥çš„éƒ¨åˆ†å†…å®¹éå­—æ¯å’Œæ•°å­—ã€‚\n");
+            //default: printf("ÄúÊäÈëµÄ²¿·ÖÄÚÈİ·Ç×ÖÄ¸ºÍÊı×Ö¡£\n");
         }
         count++;
     }
-    printf("å‘¼å·%sçš„å­—æ¯è§£é‡Šæ³•æ˜¯ï¼š%s\n", word, phonetic);
+    printf("ºôºÅ%sµÄ×ÖÄ¸½âÊÍ·¨ÊÇ£º%s\n", word, phonetic);
     printf("\n");
     return 0;
 }

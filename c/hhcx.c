@@ -1,8 +1,8 @@
-// ä¸šä½™æ— çº¿ç”µå°å‘¼å·æ‰€å±žåˆ†åŒºä¿¡æ¯æŸ¥è¯¢Cç¨‹åº
-// ä½¿ç”¨æ–¹æ³•ï¼š
+// ÒµÓàÎÞÏßµçÌ¨ºôºÅËùÊô·ÖÇøÐÅÏ¢²éÑ¯C³ÌÐò
+// Ê¹ÓÃ·½·¨£º
 //   $ pcc -Wall -Wpedantic -Wextra -std=c99 hhcx.c -o hhcx
 //   $ ./hhcx
-// æµ‹è¯•ï¼š
+// ²âÊÔ£º
 //   BS7H, JJ1DSB, BG1AAA, BT55CRF, BT1A, BY1PK, B1Z, B1A
 //   K4X, N2ASD, A22A, I20000X, 4X4AAA, 3DA0RS
 #include <stdio.h>
@@ -12,7 +12,7 @@ void func(char *temp)
 {
     char *name;
     name = strtok(temp, ":");
-    // å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºå¤§å†™
+    // ½«×Ö·û´®×ª»»Îª´óÐ´
     char *s = name;
     while (*s)
     {
@@ -24,77 +24,77 @@ int main(void)
 {
     const char *f[10][4] =
     {
-        {"åŒ—äº¬"},
-        {"é»‘é¾™æ±Ÿ", "å‰æž—", "è¾½å®"},
-        {"å¤©æ´¥", "å†…è’™å¤", "æ²³åŒ—", "å±±è¥¿"},
-        {"ä¸Šæµ·", "å±±ä¸œ", "æ±Ÿè‹"},
-        {"æµ™æ±Ÿ", "æ±Ÿè¥¿", "ç¦å»º"},
-        {"å®‰å¾½", "æ²³å—", "æ¹–åŒ—"},
-        {"æ¹–å—", "å¹¿ä¸œ", "å¹¿è¥¿", "æµ·å—"},
-        {"å››å·", "é‡åº†", "è´µå·ž", "äº‘å—"},
-        {"é™•è¥¿", "ç”˜è‚ƒ", "å®å¤", "é’æµ·"},
-        {"æ–°ç–†", "è¥¿è—"}
+        {"±±¾©"},
+        {"ºÚÁú½­", "¼ªÁÖ", "ÁÉÄþ"},
+        {"Ìì½ò", "ÄÚÃÉ¹Å", "ºÓ±±", "É½Î÷"},
+        {"ÉÏº£", "É½¶«", "½­ËÕ"},
+        {"Õã½­", "½­Î÷", "¸£½¨"},
+        {"°²»Õ", "ºÓÄÏ", "ºþ±±"},
+        {"ºþÄÏ", "¹ã¶«", "¹ãÎ÷", "º£ÄÏ"},
+        {"ËÄ´¨", "ÖØÇì", "¹óÖÝ", "ÔÆÄÏ"},
+        {"ÉÂÎ÷", "¸ÊËà", "ÄþÏÄ", "Çàº£"},
+        {"ÐÂ½®", "Î÷²Ø"}
     };
     char h[20];
-    printf("\n\tä¸šä½™æ— çº¿ç”µå°å‘¼å·æ‰€å±žåˆ†åŒºä¿¡æ¯æŸ¥è¯¢Cç¨‹åº\n\n");
-    printf("è¯·è¾“å…¥è¦æŸ¥è¯¢çš„å‘¼å·ï¼ˆä¾‹å­ï¼šBH9YYYã€bh1aaï¼‰ï¼š");
+    printf("\n\tÒµÓàÎÞÏßµçÌ¨ºôºÅËùÊô·ÖÇøÐÅÏ¢²éÑ¯C³ÌÐò\n\n");
+    printf("ÇëÊäÈëÒª²éÑ¯µÄºôºÅ£¨Àý×Ó£ºBH9YYY¡¢bh1aa£©£º");
     if (fgets(h, 20, stdin))
     {
         h[strcspn(h, "\n")] = 0;
     }
     func(h);
-    printf("\nè¯¥å‘¼å·ä¿¡æ¯ï¼š\n");
-    if (strlen(h) == 5 || strlen(h) == 6)   // 5ä½å‘¼å·ã€6ä½å‘¼å·
+    printf("\n¸ÃºôºÅÐÅÏ¢£º\n");
+    if (strlen(h) == 5 || strlen(h) == 6)   // 5Î»ºôºÅ¡¢6Î»ºôºÅ
     {
-        if (h[0] == 'B')   // å›½é™…ç”µä¿¡è”ç›Ÿåˆ†é…ç»™ä¸­å›½
+        if (h[0] == 'B')   // ¹ú¼ÊµçÐÅÁªÃË·ÖÅä¸øÖÐ¹ú
         {
 
             if (h[1] < 'A' || h[1] > 'Z')
-                printf("ç¬¬äºŒä½å­—ç¬¦%cï¼šç”µå°ç±»åž‹æ ¼å¼é”™è¯¯ï¼\n", h[1]);
+                printf("µÚ¶þÎ»×Ö·û%c£ºµçÌ¨ÀàÐÍ¸ñÊ½´íÎó£¡\n", h[1]);
             else if ((h[1] >= 'L' && h[1] <= 'Q') || (h[1] >= 'U' && h[1] <= 'X'))
-                // LMNOPQæˆ–UVWXä¸ºä¿ç•™
-                printf("ç¬¬äºŒä½å­—ç¬¦%cï¼šå›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„ç•™ä½œå¤‡ç”¨\n", h[1]);
+                // LMNOPQ»òUVWXÎª±£Áô
+                printf("µÚ¶þÎ»×Ö·û%c£º¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹Áô×÷±¸ÓÃ\n", h[1]);
             else if (h[1] == 'J')
-                printf("ç¬¬äºŒä½å­—ç¬¦%cï¼šä¸šä½™ä¿¡æ ‡å°æˆ–ç©ºé—´ä¸šä½™æ— çº¿ç”µå°\n", h[1]);
+                printf("µÚ¶þÎ»×Ö·û%c£ºÒµÓàÐÅ±êÌ¨»ò¿Õ¼äÒµÓàÎÞÏßµçÌ¨\n", h[1]);
             else if (h[1] == 'R')
-                printf("ç¬¬äºŒä½å­—ç¬¦%cï¼šä¸šä½™ä¸­ç»§å°\n", h[1]);
+                printf("µÚ¶þÎ»×Ö·û%c£ºÒµÓàÖÐ¼ÌÌ¨\n", h[1]);
             else if (h[1] == 'Y')
-                printf("ç¬¬äºŒä½å­—ç¬¦%cï¼šæ›¾ç”¨äºŽæŒ‡é…ç»™é›†ä½“ç”µå°\n", h[1]);
+                printf("µÚ¶þÎ»×Ö·û%c£ºÔøÓÃÓÚÖ¸Åä¸ø¼¯ÌåµçÌ¨\n", h[1]);
             else if (h[1] == 'Z')
-                printf("ç¬¬äºŒä½å­—ç¬¦%cï¼šæ›¾ç”¨äºŽæŒ‡é…ç»™åœ¨é›†ä½“ç”µå°ä¸Šä½¿ç”¨çš„ä¸ªäººå‘¼å·\n", h[1]);
+                printf("µÚ¶þÎ»×Ö·û%c£ºÔøÓÃÓÚÖ¸Åä¸øÔÚ¼¯ÌåµçÌ¨ÉÏÊ¹ÓÃµÄ¸öÈËºôºÅ\n", h[1]);
             if (h[2] < '0' || h[2] > '9')
-                printf("ç¬¬ä¸‰ä½å­—ç¬¦%cï¼šç”µå°åˆ†åŒºå·éžæ•°å­—ï¼\n", h[2]);
+                printf("µÚÈýÎ»×Ö·û%c£ºµçÌ¨·ÖÇøºÅ·ÇÊý×Ö£¡\n", h[2]);
             if (strlen(h) == 5 && h[3] && h[4] && !h[5] && (h[4] < 'A'
                     || h[4] > 'Z'))
-                printf("æœ€åŽä¸€ä½å­—ç¬¦%cä¸ä¸ºå­—æ¯ï¼\n", h[4]);
+                printf("×îºóÒ»Î»×Ö·û%c²»Îª×ÖÄ¸£¡\n", h[4]);
             if (strlen(h) == 6 && h[3] && h[4] && h[5] && (h[5] < 'A' || h[5] > 'Z'))
-                printf("æœ€åŽä¸€ä½å­—ç¬¦%cä¸ä¸ºå­—æ¯ï¼\n", h[5]);
+                printf("×îºóÒ»Î»×Ö·û%c²»Îª×ÖÄ¸£¡\n", h[5]);
             int i;
             for (i = 0;  i < 2 ; i++)
             {
                 if (strlen(h) == 5 && h[i + 3] > '0' && h[i + 3] < '9')
-                    printf("å«åŽç¼€å­—ç¬¦%cçš„å‘¼å·ç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…\n", h[i + 3]);
+                    printf("º¬ºó×º×Ö·û%cµÄºôºÅÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅä\n", h[i + 3]);
             }
             for (i = 0;  i < 3 ; i++)
             {
                 if (strlen(h) == 6 && h[i + 3] > '0' && h[i + 3] < '9')
-                    printf("å«åŽç¼€å­—ç¬¦%cçš„å‘¼å·ç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…\n", h[i + 3]);
+                    printf("º¬ºó×º×Ö·û%cµÄºôºÅÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅä\n", h[i + 3]);
             }
             switch (h[2])
             {
             case '1':
-                printf("ç¬¬1åŒº\t");
-                if (h[3] >= 'A' && h[3] <= 'X')    // åŒ—äº¬
+                printf("µÚ1Çø\t");
+                if (h[3] >= 'A' && h[3] <= 'X')    // ±±¾©
                     printf("%s\n", f[0][0]);
-                // è¯•é¢˜æ ¼å¼BH9YY/BH9YYYå¯¹ç­–
+                // ÊÔÌâ¸ñÊ½BH9YY/BH9YYY¶Ô²ß
                 else if (strlen(h) == 5 && h[3] && h[4] && !h[5] && (h[3] == 'Y'
                          || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c\n", h[3], h[4]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c\n", h[3], h[4]);
                 else if (strlen(h) == 6 && h[3] && h[4] && h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c%c\n", h[3], h[4], h[5]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c%c\n", h[3], h[4], h[5]);
                 break;
             case '2':
-                printf("ç¬¬2åŒº\t");
+                printf("µÚ2Çø\t");
                 if (h[3] >= 'A' && h[3] <= 'H')
                     printf("%s\n", f[1][0]);
                 else if (h[3] >= 'I' && h[3] <= 'P')
@@ -102,12 +102,12 @@ int main(void)
                 else if (h[3] >= 'Q' && h[3] <= 'X')
                     printf("%s\n", f[1][2]);
                 else if (strlen(h) == 5 && h[4] && !h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c\n", h[3], h[4]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c\n", h[3], h[4]);
                 else if (strlen(h) == 6 && h[4] && h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c%c\n", h[3], h[4], h[5]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c%c\n", h[3], h[4], h[5]);
                 break;
             case '3':
-                printf("ç¬¬3åŒº\t");
+                printf("µÚ3Çø\t");
                 if (h[3] >= 'A' && h[3] <= 'F')
                     printf("%s\n", f[2][0]);
                 else if (h[3] >= 'G' && h[3] <= 'L')
@@ -117,12 +117,12 @@ int main(void)
                 else if (h[3] >= 'S' && h[3] <= 'X')
                     printf("%s\n", f[2][3]);
                 else if (strlen(h) == 5 && h[4] && !h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c\n", h[3], h[4]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c\n", h[3], h[4]);
                 else if (strlen(h) == 6 && h[4] && h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c%c\n", h[3], h[4], h[5]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c%c\n", h[3], h[4], h[5]);
                 break;
             case '4':
-                printf("ç¬¬4åŒº\t");
+                printf("µÚ4Çø\t");
                 if (h[3] >= 'A' && h[3] <= 'H')
                     printf("%s\n", f[3][0]);
                 else if (h[3] >= 'I' && h[3] <= 'P')
@@ -130,12 +130,12 @@ int main(void)
                 else if (h[3] >= 'Q' && h[3] <= 'X')
                     printf("%s\n", f[3][2]);
                 else if (strlen(h) == 5 && h[4] && !h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c\n", h[3], h[4]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c\n", h[3], h[4]);
                 else if (strlen(h) == 6 && h[4] && h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c%c\n", h[3], h[4], h[5]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c%c\n", h[3], h[4], h[5]);
                 break;
             case '5':
-                printf("ç¬¬5åŒº\t");
+                printf("µÚ5Çø\t");
                 if (h[3] >= 'A' && h[3] <= 'H')
                     printf("%s\n", f[4][0]);
                 else if (h[3] >= 'I' && h[3] <= 'P')
@@ -143,12 +143,12 @@ int main(void)
                 else if (h[3] >= 'Q' && h[3] <= 'X')
                     printf("%s\n", f[4][2]);
                 else if (strlen(h) == 5 && h[4] && !h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c\n", h[3], h[4]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c\n", h[3], h[4]);
                 else if (strlen(h) == 6 && h[4] && h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c%c\n", h[3], h[4], h[5]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c%c\n", h[3], h[4], h[5]);
                 break;
             case '6':
-                printf("ç¬¬6åŒº\t");
+                printf("µÚ6Çø\t");
                 if (h[3] >= 'A' && h[3] <= 'H')
                     printf("%s\n", f[5][0]);
                 else if (h[3] >= 'I' && h[3] <= 'P')
@@ -156,12 +156,12 @@ int main(void)
                 else if (h[3] >= 'Q' && h[3] <= 'X')
                     printf("%s\n", f[5][2]);
                 else if (strlen(h) == 5 && h[4] && !h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c\n", h[3], h[4]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c\n", h[3], h[4]);
                 else if (strlen(h) == 6 && h[4] && h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c%c\n", h[3], h[4], h[5]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c%c\n", h[3], h[4], h[5]);
                 break;
             case '7':
-                printf("ç¬¬7åŒº\t");
+                printf("µÚ7Çø\t");
                 if (h[3] >= 'A' && h[3] <= 'H')
                     printf("%s\n", f[6][0]);
                 else if (h[3] >= 'I' && h[3] <= 'P')
@@ -173,7 +173,7 @@ int main(void)
                 //  AAA-ZZZ
                 break;
             case '8':
-                printf("ç¬¬8åŒº\t");
+                printf("µÚ8Çø\t");
                 if (h[3] >= 'A' && h[3] <= 'F')
                     printf("%s\n", f[7][0]);
                 else if (h[3] >= 'G' && h[3] <= 'L')
@@ -183,12 +183,12 @@ int main(void)
                 else if (h[3] >= 'S' && h[3] <= 'X')
                     printf("%s\n", f[7][3]);
                 else if (strlen(h) == 5 && h[4] && !h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c\n", h[3], h[4]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c\n", h[3], h[4]);
                 else if (strlen(h) == 6 && h[4] && h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c%c\n", h[3], h[4], h[5]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c%c\n", h[3], h[4], h[5]);
                 break;
             case '9':
-                printf("ç¬¬9åŒº\t");
+                printf("µÚ9Çø\t");
                 if (h[3] >= 'A' && h[3] <= 'F')
                     printf("%s\n", f[8][0]);
                 else if (h[3] >= 'G' && h[3] <= 'L')
@@ -198,12 +198,12 @@ int main(void)
                 else if (h[3] >= 'S' && h[3] <= 'X')
                     printf("%s\n", f[8][3]);
                 else if (strlen(h) == 5 && h[4] && !h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c\n", h[3], h[4]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c\n", h[3], h[4]);
                 else if (strlen(h) == 6 && h[4] && h[5] && (h[3] == 'Y' || h[3] == 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c%c\n", h[3], h[4], h[5]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c%c\n", h[3], h[4], h[5]);
                 break;
             case '0':
-                printf("ç¬¬0åŒº\t");  // æ–°ç–†ã€è¥¿è—
+                printf("µÚ0Çø\t");  // ÐÂ½®¡¢Î÷²Ø
                 // AAA-LZZ
                 if (h[3] >= 'A' && h[3] <= 'F')
                     printf("%s\n", f[9][0]);
@@ -211,40 +211,40 @@ int main(void)
                     printf("%s\n", f[9][1]);
                 // MAA-ZZZ
                 else if (strlen(h) == 5 && h[4] && !h[5] && (h[3] >= 'M' || h[3] <= 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c\n", h[3], h[4]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c\n", h[3], h[4]);
                 else if (strlen(h) == 6 && h[4] && h[5] && (h[3] >= 'M' || h[3] <= 'Z'))
-                    printf("\nç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…çš„å‘¼å·åŽç¼€ï¼š%c%c%c\n", h[3], h[4], h[5]);
+                    printf("\nÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅäµÄºôºÅºó×º£º%c%c%c\n", h[3], h[4], h[5]);
                 break;
             }
         }
         else
-            printf("å‘¼å·å‰ç¼€ç¬¬ä¸€ä½å­—ç¬¦%cå¹¶éžä¸­å›½çš„å‘¼å·ï¼\n", h[0]);
+            printf("ºôºÅÇ°×ºµÚÒ»Î»×Ö·û%c²¢·ÇÖÐ¹úµÄºôºÅ£¡\n", h[0]);
     }
-    else if (strlen(h) == 4)     // 4ä½å‘¼å·ï¼Œè§„åˆ™ä¸æ˜Ž
+    else if (strlen(h) == 4)     // 4Î»ºôºÅ£¬¹æÔò²»Ã÷
     {
         if (h[0] == 'B')
         {
-            printf("4ä½å‘¼å·%c%c%c%cç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…\n", h[0], h[1], h[2],
+            printf("4Î»ºôºÅ%c%c%c%cÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅä\n", h[0], h[1], h[2],
                    h[3]);
             if (h[0] == 'B' && h[1] == 'S' && h[2] == '7' && h[3] == 'H') // BS7H
-                printf("ç¬¬7åŒº\té»„å²©å²›\n");
+                printf("µÚ7Çø\t»ÆÑÒµº\n");
         }
         else
-            printf("å‘¼å·å‰ç¼€ç¬¬ä¸€ä½å­—ç¬¦%cå¹¶éžä¸­å›½çš„å‘¼å·ï¼\n", h[0]);
+            printf("ºôºÅÇ°×ºµÚÒ»Î»×Ö·û%c²¢·ÇÖÐ¹úµÄºôºÅ£¡\n", h[0]);
     }
-    else if (strlen(h) == 7)     // 7ä½å‘¼å·ï¼Œè§„åˆ™ä¸æ˜Ž
+    else if (strlen(h) == 7)     // 7Î»ºôºÅ£¬¹æÔò²»Ã÷
     {
         if (h[0] == 'B')
         {
-            printf("7ä½å‘¼å·%c%c%c%c%c%c%cç”±å›½å®¶æ— çº¿ç”µç®¡ç†æœºæž„è´Ÿè´£åˆ†é…\n", h[0], h[1],
+            printf("7Î»ºôºÅ%c%c%c%c%c%c%cÓÉ¹ú¼ÒÎÞÏßµç¹ÜÀí»ú¹¹¸ºÔð·ÖÅä\n", h[0], h[1],
                    h[2],
                    h[3], h[4], h[5], h[6]);
         }
         else
-            printf("å‘¼å·å‰ç¼€ç¬¬ä¸€ä½å­—ç¬¦%cå¹¶éžä¸­å›½çš„å‘¼å·ï¼\n", h[0]);
+            printf("ºôºÅÇ°×ºµÚÒ»Î»×Ö·û%c²¢·ÇÖÐ¹úµÄºôºÅ£¡\n", h[0]);
     }
     else
-        printf("\tå‘¼å·é•¿åº¦ä¸æ­£ç¡®ï¼\n");
+        printf("\tºôºÅ³¤¶È²»ÕýÈ·£¡\n");
     printf("\n");
     return 0;
 }
