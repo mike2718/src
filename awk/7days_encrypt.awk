@@ -1,4 +1,3 @@
-#!/usr/local/bin/awk -f
 # 用 7 Days to End with You 游戏中奇怪字符密码算法对字符串进行加密的awk程序
 # 用于验证解密出来的字符串是否正确
 # 在 One true awk version 20220830 中测试通过
@@ -11,7 +10,7 @@ BEGIN {
         ord[sprintf("%c",n)]=n
     for(n=0;n<256;n++)
         chr[n]=sprintf("%c",n)
-    printf "%-10s %s\n", "输入字符串", "加密字符串"
+    printf "%-10s %s\n", "Input", "Output"
     printf "%-10s %s\n", "----------", "----------"
 }
 match($0, /[a-zA-Z]+$/) {
