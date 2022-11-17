@@ -10,8 +10,8 @@ BEGIN {
         ord[sprintf("%c",n)]=n
     for(n=0;n<256;n++)
         chr[n]=sprintf("%c",n)
-    printf "%-10s %s\n", "Input", "Output"
-    printf "%-10s %s\n", "----------", "----------"
+    printf "%-10s %-10s %s\n", "原文", "密文", "右移位数"
+    printf "%-10s %-10s %s\n", "----------", "----------", "----------"
 }
 match($0, /[a-zA-Z]+$/) {
     n=split(tolower($0), m)
@@ -24,11 +24,15 @@ match($0, /[a-zA-Z]+$/) {
     s = int(sum / 12 + 0.5)
     for(i=1; i<=n; i++) {
         if(ord[m[i]] - 97 + s >= 25)  # 通过了 'z'
-            printf "%c", s - 25 + ord[m[i]]
+            y[i] = s - 25 + ord[m[i]]
         else
-            printf "%c", ord[m[i]] + s
+            y[i] = ord[m[i]] + s
     }
-    printf " (移位 = %d)", s
+    for(i=1; i<=n; i++)
+        printf "%c", chr[y[i]]
+    for(i=1; i<=11-n; i++)
+        printf " "
+    printf "%d", s
     printf "\n\n"
 }
 END {
