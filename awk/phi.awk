@@ -1,7 +1,7 @@
 #!/usr/local/bin/awk -f
 #
-# ¼ÆËã»Æ½ğ·Ö¸îÊıµÄawk³ÌĞò
-# ÔÚone true awk version 20211208ÖĞ²âÊÔÍ¨¹ı
+# è®¡ç®—é»„é‡‘åˆ†å‰²æ•°çš„awkç¨‹åº
+# åœ¨one true awk version 20211208ä¸­æµ‹è¯•é€šè¿‡
 
 function phie(n) {
     if (n == 0)
@@ -30,11 +30,11 @@ function phip(n) {
 }
 
 BEGIN {
-    printf "\t¼ÆËã»Æ½ğ·Ö¸îÊıµÄawk³ÌĞò\n"
-    printf "\nÇëÊäÈëÒª¼ÆËãµÄÊıÁ¿£º"
+    printf "\tè®¡ç®—é»„é‡‘åˆ†å‰²æ•°çš„awkç¨‹åº\n"
+    printf "\nè¯·è¾“å…¥è¦è®¡ç®—çš„æ•°é‡ï¼š"
     getline n < "-"
     n += 0
-    printf "%-10s %s\n", "ÃİËã·¨", "ÃİµÄºÍËã·¨"
+    printf "%-10s %s\n", "å¹‚ç®—æ³•", "å¹‚çš„å’Œç®—æ³•"
     printf "%-10s %s\n", "------", "----------"
     for (i = 1; i <= n; i++)
         printf "%-10.3f %.3f\n", phie(i), phip(i)
