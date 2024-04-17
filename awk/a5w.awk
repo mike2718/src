@@ -1,2 +1,2 @@
-# 鍥借鑻规灉5W澶村厖鐢靛櫒搴忓垪鍙风湡鍋囬壌鍒獳WK绋嬪簭
-# 鍙傝�冧簡锛歨ttps://zhuanlan.zhihu.com/p/450839428
+# 国行苹果5W头充电器序列号真假鉴别AWK程序
+# 参考了：https://zhuanlan.zhihu.com/p/450839428

@@ -1,7 +1,7 @@
 #!/usr/local/bin/awk -f
-# ç©·ä¸¾7 Days to End with Youæ¸¸æˆä¸­å¥‡æ€ªå­—ç¬¦å¯†ç çš„awkç¨‹åº
-# åœ¨one true awk version 20220530ä¸­æµ‹è¯•é€šè¿‡
-# è¯·å…ˆçœ‹æŠŠå¯†ç å­—ç¬¦è½¬æ¢æˆå¯è¾“å…¥å­—ç¬¦çš„å¯¹åº”è¡¨ï¼š
+# Çî¾Ù7 Days to End with YouÓÎÏ·ÖĞÆæ¹Ö×Ö·ûÃÜÂëµÄawk³ÌĞò
+# ÔÚone true awk version 20220530ÖĞ²âÊÔÍ¨¹ı
+# ÇëÏÈ¿´°ÑÃÜÂë×Ö·û×ª»»³É¿ÉÊäÈë×Ö·ûµÄ¶ÔÓ¦±í£º
 # https://www.sakuranamiki.net/7days/index.html
 #
 BEGIN {

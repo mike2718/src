@@ -1,10 +1,10 @@
 #!/usr/local/bin/awk -f
 #
-# ç”¨æ¥è®¡ç®—è€ƒæ‹‰å…¹çŒœæƒ³çš„awkç¨‹åº
-# ç›®å‰åªåœ¨One true awkä¸­æµ‹è¯•è¿‡
+# ÓÃÀ´¼ÆËã¿¼À­×È²ÂÏëµÄawk³ÌÐò
+# Ä¿Ç°Ö»ÔÚOne true awkÖÐ²âÊÔ¹ý
 #
-# TODO 1. æ— æ³•è®¡ç®—æ— ç©·å¤§çš„æ•°
-# TODO 2. æ— æ³•è®¡ç®—è´Ÿæ•°
+# TODO 1. ÎÞ·¨¼ÆËãÎÞÇî´óµÄÊý
+# TODO 2. ÎÞ·¨¼ÆËã¸ºÊý
 
 function collatz(n)
 {
@@ -18,8 +18,8 @@ function collatz(n)
 }
 
 BEGIN {
-    printf "\tè®¡ç®—è€ƒæ‹‰å…¹çŒœæƒ³çš„awkç¨‹åº\n"
-    printf "\nè¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°ï¼š"
+    printf "\t¼ÆËã¿¼À­×È²ÂÏëµÄawk³ÌÐò\n"
+    printf "\nÇëÊäÈëÒ»¸öÕûÊý£º"
     getline n < "-"
     collatz(n)
 }
